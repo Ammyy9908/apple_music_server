@@ -12,6 +12,10 @@ var client_id = '614e4ad3b1304cc6afbb6d874096cc6b';
 var client_secret = 'b04f0e0c7fc74698aa3d65654ae8ad0a';
 
 
+
+app.get('/',async (req,res)=>{
+    res.redirect('/login')
+})
 app.get('/callback', function(req, res) {
 
     var code = req.query.code || null;
@@ -64,6 +68,8 @@ app.get('/login', function(req, res) {
       
     }));
 });
+
+
 
 
 var server_port = process.env.YOUR_PORT || process.env.PORT || 80;
