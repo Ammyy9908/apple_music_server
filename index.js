@@ -66,7 +66,7 @@ app.get('/login', function(req, res) {
 });
 
 
-const PORT = process.env.PORT | 8000;
+const PORT = 3001;
 app.listen(PORT,()=>{
     console.log(`listening at ${PORT}`)
 })
