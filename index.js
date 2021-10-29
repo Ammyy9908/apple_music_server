@@ -36,7 +36,7 @@ app.get('/callback', function(req, res) {
         if (!error && response.statusCode === 200) {
          
           const {access_token} = body;
-          res.redirect(`https://apple-music-gvc4b9tl4-ammyy9908.vercel.app?access_token=${access_token}`)
+          res.redirect(`https://apple-music-alpha.vercel.app?access_token=${access_token}`)
         }
       });
 
