@@ -6,7 +6,7 @@ const request = require('request');
 
 
 
-var redirect_uri = 'http://localhost:5000/callback';
+var redirect_uri = 'https://apple-server.herokuapp.com/callback';
 
 var client_id = '614e4ad3b1304cc6afbb6d874096cc6b';
 var client_secret = 'b04f0e0c7fc74698aa3d65654ae8ad0a';
