@@ -8,7 +8,7 @@ const request = require('request');
 
 // backend
 
-var redirect_uri = 'http://localhost:5000/callback';
+var redirect_uri = 'https://apple-server.herokuapp.com/callback';
 
 var client_id = '614e4ad3b1304cc6afbb6d874096cc6b';
 var client_secret = 'b04f0e0c7fc74698aa3d65654ae8ad0a';
@@ -74,11 +74,11 @@ app.get('/login', function(req, res) {
 
 
 
-// var server_port = process.env.YOUR_PORT || process.env.PORT || 80;
-// var server_host = process.env.YOUR_HOST || '0.0.0.0';
-// app.listen(server_port, server_host, function() {
-//     console.log('Listening on port %d', server_port);
-// });
+var server_port = process.env.YOUR_PORT || process.env.PORT || 80;
+var server_host = process.env.YOUR_HOST || '0.0.0.0';
+app.listen(server_port, server_host, function() {
+    console.log('Listening on port %d', server_port);
+});
 
 
 
@@ -106,7 +106,7 @@ app.post('/refresh_token', function(req, res) {
   });
 });
 
-app.listen(process.env.PORT || 5000,()=>{
-    console.log(`Listening at ${process.env.PORT || 5000}`)
-})
+// app.listen(process.env.PORT || 5000,()=>{
+//     console.log(`Listening at ${process.env.PORT || 5000}`)
+// })
 
