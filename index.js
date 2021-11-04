@@ -42,7 +42,7 @@ app.get('/callback', function(req, res) {
         if (!error && response.statusCode === 200) {
          
           const {access_token,refresh_token} = body;
-          res.redirect(`http://localhost:3000?access_token=${access_token}&refresh_token=${refresh_token}`)
+          res.redirect(`https://apple-music-alpha.vercel.app?access_token=${access_token}&refresh_token=${refresh_token}`)
         }
       });
 
